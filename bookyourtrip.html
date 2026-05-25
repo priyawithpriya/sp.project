@@ -1,0 +1,186 @@
+BOOKYOUTTRIPPAGE 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hdbcbcv
+</title>
+
+
+<style>
+
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background-color:#fdf0f5;
+}
+
+/* NAVBAR */
+.navbar{
+  background-color:#8d6e63;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+}
+
+.logo{
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  font-family:"Segoe Script","Comic Sans MS",cursive;
+}
+
+.logo:hover{
+  color:darkorange;
+}
+
+/* NAV LINKS */
+.navbar a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-size:18px;
+  padding:6px 12px;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  background-color:darkorange;
+  color:black;
+  border-radius:6px;
+}
+
+/* SECTION */
+.trip-section{
+padding:60px 20px;
+text-align:center;
+background-color:#fdf0f5;
+min-height:100vh;
+}
+
+form{
+max-width:450px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+background-color:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+label{
+text-align:left;
+font-weight:600;
+margin-top:10px;
+}
+
+input,select,textarea{
+padding:12px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+outline:none;
+border:1px solid teal;
+}
+
+/* BUTTON */
+.btn{
+background-color:#8d6e63;
+color:white;
+border:none;
+padding:12px;
+cursor:pointer;
+font-size:16px;
+border-radius:6px;
+transition:0.3s;
+margin-top:15px;
+}
+
+.btn:hover{
+background-color:darkorange;
+}
+
+</style> </head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="logo">Travelwithus</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a>
+      <a href="destination.html">Destination</a>
+    <a href="bookyourtrip.html">Book your trip</a>
+      <a href="contact.html">Contact</a>
+ 
+    </div>
+  </nav>
+</header>
+<section class="trip-section">
+    <h1>Plan Your Dream India Tour ✈️</h1>
+    <p>Tell us your preferences and we’ll design your perfect trip!</p>
+
+    <form onsubmit="return showMessage()">
+
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+
+        <label>Select Destination:</label>
+        <select required>
+            <option value="">Choose Destination</option>
+            <option>Goa 🏖️</option>
+            <option>Mahableshwar🏔️</option>
+            <option>Jaipur 🏰</option>
+        </select>
+
+               <label>Select Your Trip Package:</label>
+<select required>
+    <option value="">Choose Destination & Price</option>
+    <option>Goa – ₹9,999</option>
+    <option>Mahabaleshwar – ₹6,499</option>
+    <option>Jaipur – ₹7,999</option>
+</select>
+
+        <label for="travel-date">Travel Date</label>
+<input type="date" id="travel-date" name="travel-date">
+
+<label for="duration">Duration (Days)</label>
+<input type="number" id="duration" name="duration" placeholder="Enter number of days">
+
+<label for="travel-month">Travel Month</label>
+<select id="travel-month" name="travel-month">
+    <option value="">Select Month</option>
+    <option>January</option>
+    <option>February</option>
+    <option>March</option>
+    <option>April</option>
+    <option>May</option>
+    <option>June</option>
+    <option>July</option>
+    <option>August</option>
+    <option>September</option>
+    <option>October</option>
+    <option>November</option>
+    <option>December</option>
+</select>
+<label for="request">Your Special Request</label>
+<textarea id="request" rows="4" placeholder="Tell us any special requirements..."></textarea>
+
+<button type="submit" class="btn">Book the Trip</button>
+</form>  
+<script>
+function showMessage() {
+    alert("Thank you! Our travel expert will contact you within 24 hours to plan your perfect India tour.");
+    return false;
+}
+</script>
+ </section>
+
+</body>
+</html>

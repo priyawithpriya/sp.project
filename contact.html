@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<title>Travel Website</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background-color:#fdf0f5;
+}
+
+/* NAVBAR */
+.navbar{
+  background-color:#8d6e63;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+}
+
+.logo{
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  font-family:"Segoe Script","Comic Sans MS",cursive;
+}
+
+.logo:hover{
+  color:darkorange;
+}
+
+/* NAV LINKS */
+.navbar a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-size:18px;
+  padding:6px 12px;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  background-color:darkorange;
+  color:black;
+  border-radius:6px;
+}
+
+/* CONTACT INFO */
+.contact-info{
+  text-align:center;
+  margin:20px;
+}
+
+/* STICKER CONTAINER */
+.sticker{
+  position:fixed;
+  left:20px;
+  top:150px;
+  display:grid;
+  grid-template-columns:repeat(2,auto);
+  gap:12px;
+}
+
+/* STICKER IMAGE SIZE */
+.sticker img{
+  width:200px;     /* SMALL SIZE */
+  height:auto;
+}
+.sticker img:nth-child(3){
+    grid-column:1/span2;
+    justify-self:center;
+}
+.sticker{
+    animation:bounceLeft 1.4s
+    ease-out forwards;
+}
+@keyframes bounceLeft{
+     0%{
+      opacity:0;
+      transform:translateX(-120px);
+}
+   60%{
+      opacity:1;
+      transform:translateX(20px);
+
+}
+  80%{
+    transform:translateX(-8px);
+
+}
+   100%{
+      transform:translateX(0);
+
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">TravelWithUs</div>
+  <div>
+    <a href="home.html">Home</a>
+    <a href="destination.html">Destination</a>
+    <a href="bookyourtrip.html">Book Your Trip</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<h1 style="text-align:center;">Contact us for any query regarding booking</h1>
+
+<div class="contact-info">
+  <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+  <p><strong>📧 Email:</strong> travelwithus@gmail.com</p>
+  <p><strong>📍 Address:</strong> Thane, Maharashtra, India</p>
+</div>
+
+<!-- STICKERS -->
+<div class="sticker">
+  <img src="\Users\SAKSHI PANDEY\Desktop\9f0c82e2-df5d-4c2a-ae64-58cfbd288284.jpg" alt="sticker">
+  <img src="\Users\SAKSHI PANDEY\Desktop\b4df8fcf-077f-4711-9888-86f34dd47939.jpg" alt="sticker">
+  <img src="\Users\SAKSHI PANDEY\Desktop\99df0b78-d2ce-4910-b438-245002fb69ea.jpg" alt="sticker">
+</div>
+
+</body>
+</html>

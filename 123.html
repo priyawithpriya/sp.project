@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Website</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background-color:#fdf0f5;
+}
+
+/* NAVBAR */
+.navbar{
+  background-color:#8d6e63;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 50px;
+}
+
+.logo{
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  font-family:"Segoe Script","Comic Sans MS",cursive;
+  animation:fadeEffect 1s infinite ease-in-out;
+}
+
+.logo:hover{
+  color:darkorange;
+}
+
+/* NAV LINKS */
+.navbar a{
+  color:white;
+  margin:10px;
+  text-decoration:none;
+  font-size:18px;
+  padding:6px 12px;
+  transition:0.3s;
+}
+
+.navbar a:hover{
+  background-color:darkorange;
+  color:black;
+  border-radius:6px;
+}
+
+@keyframes fadeEffect {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* MAIN SECTION */
+.firstsection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px;
+}
+
+/* LEFT */
+.leftsection {
+  background-color: white;
+  padding: 20px 40px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 30px rgba(0,0,0,0.25);
+}
+
+.leftsection h1 {
+  font-size: 40px;
+}
+
+.leftsection p {
+  font-size: 20px;
+  font-family: "Comic Sans MS";
+}
+
+/* ✅ RIGHT IMAGE SECTION (FIXED LIKE CONTACT PAGE) */
+.right-section{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* IMAGE STYLE */
+.right-section img{
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  animation: slideFadeIn 1.2s ease-out forwards;
+}
+
+/* THIRD IMAGE CENTER */
+.right-section img:nth-child(3){
+  grid-column: 1 / span 2;
+  justify-self: center;
+}
+
+/* IMAGE ANIMATION */
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* TEXT ANIMATION */
+#changing-text {
+  transition: opacity 1s;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="logo">Travelwithus</div>
+  <div class="nav-links">
+    <a href="home.html">Home</a>
+    <a href="destination.html">Destination</a>
+    <a href="bookyourtrip.html">Book your trip</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+
+<section class="firstsection">
+
+  <div class="leftsection">
+    <h1>Hello,</h1>
+    <p id="changing-text">Welcome to our dream place...</p>
+  </div>
+
+  <!-- ✅ IMAGE LAYOUT SAME AS CONTACT PAGE -->
+  <div class="right-section">
+    <img src="\Users\SAKSHI PANDEY\Desktop\c9a03c9f-7600-41c3-8946-bd8ca9c85ddc.jpg" alt="sticker">
+    <img src="\Users\SAKSHI PANDEY\Desktop\456.JPG" alt="sticker">
+    <img src="\Users\SAKSHI PANDEY\Desktop\ef66262a-78c6-4faa-9987-d3f34d9deb09.jpg" alt="sticker">
+  </div>
+
+</section>
+
+<script>
+let texts = [
+  "Welcome to our dream place...",
+  "Welcome to our dream destination...",
+  "Explore the beauty with us..."
+];
+
+let index = 0;
+let text = document.getElementById("changing-text");
+
+setInterval(() => {
+  text.style.opacity = 0;
+  setTimeout(() => {
+    index = (index + 1) % texts.length;
+    text.innerHTML = texts[index];
+    text.style.opacity = 1;
+  }, 1000);
+}, 3000);
+</script>
+
+</body>
+</html>
